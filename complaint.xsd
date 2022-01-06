@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="Rail">        
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="complaint" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="date" type="xs:integer"/>
+							<xs:element name="time" type="xs:integer"/>
+							<xs:element name="name" type="xs:string"/> 
+							<xs:element name="email" type="string"/>
+							<xs:element name="id" type="cid"/>							
+							<xs:element name="phno" type="phone"/>
+						</xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+             </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+<xs:simpleType name="cid">
+    	<xs:restriction base="xs:integer">
+    	<xs:minInclusive value="00"/>
+    	<xs:maxExclusive value="10000"/>
+    </xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="phone">
+    	<xs:restriction base="xs:integer">
+    	<xs:minInclusive value="6"/>
+    	<xs:maxExclusive value="60000000000"/>
+    </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>
