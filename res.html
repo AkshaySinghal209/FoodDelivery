@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>RESTRAUNTS</h2>
+    <div ng-controller = "destinationctr">
+        <table class="table table-hover table-striped table-responsive table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Popularity</th>
+                    <th>Speciality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="dest in destination">
+                    <td>{{dest.name}}</td>
+                    <td>{{dest.popularity}}</td>
+                    <td>{{dest.bestfor}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</body>
+</html>
